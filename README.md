@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+# Bhanu Sharma's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website to showcase my skills, projects, and experience as a full stack developer. Built with React, TypeScript, Vite, and Framer Motion, this portfolio highlights my journey, technical expertise, and recent work.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Animated Loader**: Smooth entry animation using GSAP and Framer Motion.
+- **Responsive Design**: Looks great on all devices (desktop, tablet, mobile).
+- **Project Showcase**: Highlights featured and recent projects with links to GitHub.
+- **Skills & Experience**: Detailed sections for skills, education, and work experience.
+- **Modern UI/UX**: Clean, accessible, and visually appealing interface.
+- **Routing**: Multi-page navigation using React Router.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: CSS Modules, Custom Fonts, Framer Motion
+- **Animation**: GSAP, Framer Motion
+- **Icons**: React Icons
+- **Routing**: React Router DOM
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Folder Structure
+
+```
+portfolio/
+├── public/                # Static assets
+├── src/
+│   ├── assets/            # Fonts, images, styles
+│   ├── components/
+│   │   ├── common/        # Shared UI (Navbar, Loader, Footer, etc.)
+│   │   ├── sections/      # Page sections (About, Hero, Projects, etc.)
+│   │   └── ui/            # UI elements (Card, Modal, Tooltip)
+│   ├── context/           # React context providers
+│   ├── data/              # Data for skills, projects, etc.
+│   ├── hooks/             # Custom React hooks
+│   ├── pages/             # Page components (Home, About, Skills, etc.)
+│   ├── utils/             # Utility functions
+│   └── main.tsx           # App entry point
+├── index.html             # Main HTML file
+├── package.json           # Project metadata & scripts
+└── README.md              # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🖥️ Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+$ git clone https://github.com/Bhanu-Sharma-7/Bhanu-s-Portfolio.git
+$ cd Bhanu-s-Portfolio
+
+# Install dependencies
+$ npm install
+# or
+yarn install
 ```
+
+### Running Locally
+```bash
+# Start the development server
+$ npm run dev
+# or
+yarn dev
+```
+Visit [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Building for Production
+```bash
+$ npm run build
+# or
+yarn build
+```
+
+---
+
+## 📚 Credits
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [GSAP](https://greensock.com/gsap/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## 🙋‍♂️ About Me
+
+Hi! I'm Bhanu Sharma, a self-taught developer passionate about building web and mobile apps. Connect with me on [GitHub](https://github.com/Bhanu-Sharma-7) or [LinkedIn](https://www.linkedin.com/in/bhanu-sharma-7/).
+
+---
+
+Feel free to fork, use, or contribute to this project!
