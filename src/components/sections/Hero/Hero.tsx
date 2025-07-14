@@ -1,20 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { BsSun, BsMoon } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import './Hero.css';
 
 const Hero = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Check user's system preference
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDarkMode(mediaQuery.matches);
-    
-    const handler = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
 
   // Animation variants
   const container = {
@@ -35,17 +23,8 @@ const Hero = () => {
   };
 
   return (
-    <section className={`hero ${isDarkMode ? 'dark' : 'light'}`}>
+    <section className="hero">
       <div className="hero-background"></div>
-      
-      {/* Theme Toggle Button */}
-      <button 
-        className="theme-toggle"
-        onClick={() => setIsDarkMode(!isDarkMode)}
-        aria-label="Toggle dark mode"
-      >
-        {isDarkMode ? <BsSun size={18} /> : <BsMoon size={18} />}
-      </button>
       
       <motion.div 
         className="hero-content"
@@ -77,30 +56,23 @@ const Hero = () => {
           className="hero-cta"
           variants={item}
         >
-          <motion.a 
-            href="#projects" 
-            className="cta-button primary"
-            whileHover={{ 
-              y: -3,
-              transition: { type: "spring" as const, stiffness: 300 }
-            }}
+          <motion.div
+            whileHover={{ y: -3, transition: { type: "spring" as const, stiffness: 300 } }}
             whileTap={{ scale: 0.95 }}
           >
-            Explore My Work
-            <span className="arrow">→</span>
-          </motion.a>
-          
-          <motion.a 
-            href="#contact" 
-            className="cta-button secondary"
-            whileHover={{ 
-              y: -3,
-              transition: { type: "spring" as const, stiffness: 300 }
-            }}
+            <Link to="/projects" className="cta-button primary">
+              Explore My Work
+              <span className="arrow">→</span>
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ y: -3, transition: { type: "spring" as const, stiffness: 300 } }}
             whileTap={{ scale: 0.95 }}
           >
-            Get In Touch
-          </motion.a>
+            <Link to="/contact" className="cta-button secondary">
+              Get In Touch
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

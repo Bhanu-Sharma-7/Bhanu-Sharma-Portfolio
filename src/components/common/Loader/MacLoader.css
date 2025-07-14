@@ -1,0 +1,99 @@
+/* Main Container */
+.mac-loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* MacBook Top Bar */
+.macbook-top-bar {
+  height: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 12px 12px 0 0;
+  margin-bottom: -1px;
+  position: relative;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+/* MacBook Screen */
+.macbook-screen {
+  width: 60%;
+  height: 40vh;
+  max-height: 400px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Progress Circle */
+.progress-circle {
+  width: 80px;
+  height: 80px;
+}
+.progress-circle circle {
+  stroke: var(--accent);
+}
+
+/* Loading Dots */
+.loading-dots {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* MacBook Bottom Bar */
+.macbook-bottom-bar {
+  height: 12px;
+  background: var(--bg-tertiary);
+  border-radius: 0 0 12px 12px;
+  margin-top: -1px;
+  position: relative;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+/* Screen Glow Effect */
+.screen-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(124,58,237,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .macbook-screen {
+    width: 80%;
+    height: 30vh;
+  }
+  
+  .macbook-top-bar {
+    width: 90% !important;
+  }
+  
+  .macbook-bottom-bar {
+    width: 70% !important;
+  }
+} 

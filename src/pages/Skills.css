@@ -1,0 +1,130 @@
+/* Skills Section */
+.skills-section {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px rgba(30,41,59,0.08);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(30,41,59,0.13);
+}
+
+.category-title {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-icon {
+  color: var(--accent);
+  font-family: 'SF Mono', monospace;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-icon-name {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.skill-icon {
+  font-size: 1.6rem;
+  color: var(--accent);
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 4px;
+  padding: 0.2rem;
+  transition: background 0.2s;
+}
+
+.skill-item:hover .skill-icon {
+  background: rgba(124, 58, 237, 0.18);
+}
+
+.skill-name {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Remove old progress bar styles */
+.skill-percent, .skill-bar, .skill-progress {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .skill-category {
+    padding: 1.5rem;
+  }
+} 

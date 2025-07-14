@@ -1,0 +1,129 @@
+/* About Section */
+.about-section {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin-top: 80px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.title-number {
+  color: var(--accent);
+  font-family: 'SF Mono', monospace;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.tech-stack {
+  margin-top: 2rem;
+}
+
+.tech-stack h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.tech-stack ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.tech-stack li {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.tech-stack li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-frame {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(30,41,59,0.08);
+  border: 2px solid var(--accent);
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, var(--accent)20, var(--bg-primary));
+}
+
+.about-real-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    margin-top: 3rem;
+    max-width: 250px;
+    margin-left: 0;
+  }
+  
+  .tech-stack ul {
+    grid-template-columns: 1fr;
+  }
+} 
