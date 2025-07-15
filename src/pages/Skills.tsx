@@ -59,7 +59,7 @@ const Skills = () => {
     {
       category: "Cloud Services",
       skills: [
-        { name: "AWS", icon: SiAmazon },
+        { name: "AWS (EC2, S3, Lambda)", icon: SiAmazon },
         { name: "Cloudinary", icon: SiCloudinary }
       ]
     },
