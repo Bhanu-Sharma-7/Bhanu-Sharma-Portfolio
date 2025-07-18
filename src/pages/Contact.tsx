@@ -1,7 +1,31 @@
 import { motion } from "framer-motion";
 import './Contact.css';
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+// If you see a type error for 'emailjs-com', install types: npm install --save-dev @types/emailjs-com (if available)
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_fqhsb88", // replace with your EmailJS service ID
+        "template_6xor477", // replace with your EmailJS template ID
+        form.current!,
+        "gO3TLHf-y5TwjEZlD" // replace with your EmailJS user ID (public key)
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+        },
+        () => {
+          alert("Failed to send message. Please try again later.");
+        }
+      );
+  };
+
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
@@ -94,7 +118,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" required />
