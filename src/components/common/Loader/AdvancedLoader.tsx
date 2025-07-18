@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { motion } from 'framer-motion';
 import './AdvancedLoader.css';
 
 interface AdvancedLoaderProps {
