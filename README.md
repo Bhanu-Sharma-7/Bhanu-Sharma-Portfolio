@@ -79,16 +79,6 @@ portfolio/
 
 ---
 
-## 🚢 Deployment
-
-You can deploy this portfolio easily on platforms like **Vercel**, **Netlify**, or **GitHub Pages**.
-
-- Build your project: `npm run build` or `yarn build`
-- Upload the `dist/` folder to your chosen hosting platform
-- For Vercel/Netlify: Just connect your GitHub repo and deploy!
-
----
-
 ## 🤝 Contributing
 
 Contributions, suggestions, and improvements are welcome!
@@ -100,12 +90,3 @@ Contributions, suggestions, and improvements are welcome!
 5. Open a Pull Request
 
 ---
-
-## 🙋‍♂️ About Me
-
-Hi! I'm **Bhanu Sharma**, a self-taught developer passionate about building web and mobile apps.
-
-- [GitHub](https://github.com/Bhanu-Sharma-7)
-- [LinkedIn](https://www.linkedin.com/in/bhanu-sharma-7/)
-
-Feel free to connect, fork, use, or contribute to this project!
